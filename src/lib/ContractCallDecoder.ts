@@ -4,8 +4,10 @@ import {
   decode as decodeBytecode,
   get as getBytecode,
 } from '@marcocastignoli/bytecode-utils';
-import axios from 'axios';
 import { EthereumProvider } from 'ethereum-provider';
+
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const axios = require('axios');
 
 export enum MetadataSources {
   Sourcify,
@@ -33,7 +35,7 @@ export async function getMetadataFromAddress(options: GetMetadataOptions) {
   let contractMetadataJSON;
   if (options.source === MetadataSources.Sourcify) {
     try {
-      const req = await axios(
+      const req = await axios.get(
         `${options.sourcifyProvider}/contracts/full_match/${options.chainId}/${options.address}/metadata.json`
       );
       contractMetadataJSON = req.data;
@@ -45,7 +47,7 @@ export async function getMetadataFromAddress(options: GetMetadataOptions) {
     const bytecode = await getBytecode(options.address, options.rpcProvider);
     const { ipfs: metadataIpfsCid } = decodeBytecode(bytecode);
     try {
-      const req = await axios(
+      const req = await axios.get(
         `${options.ipfsProvider}/ipfs/${metadataIpfsCid}`
       );
       contractMetadataJSON = req.data;
