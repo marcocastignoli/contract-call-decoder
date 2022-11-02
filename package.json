@@ -1,5 +1,5 @@
 {
-  "name": "contract-call-decoder-2",
+  "name": "contract-call-decoder",
   "version": "1.0.1",
   "description": "-",
   "main": "build/main/index.js",
