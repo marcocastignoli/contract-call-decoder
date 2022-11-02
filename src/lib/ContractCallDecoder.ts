@@ -4,7 +4,7 @@ import {
   decode as decodeBytecode,
   get as getBytecode,
 } from '@marcocastignoli/bytecode-utils';
-import fetch from 'cross-fetch';
+import axios from 'axios';
 import { EthereumProvider } from 'ethereum-provider';
 
 export enum MetadataSources {
@@ -33,10 +33,10 @@ export async function getMetadataFromAddress(options: GetMetadataOptions) {
   let contractMetadataJSON;
   if (options.source === MetadataSources.Sourcify) {
     try {
-      const req = await fetch(
+      const req = await axios(
         `${options.sourcifyProvider}/contracts/full_match/${options.chainId}/${options.address}/metadata.json`
       );
-      contractMetadataJSON = await req.json();
+      contractMetadataJSON = req.data;
     } catch (e) {
       console.log(e);
       return false;
@@ -45,10 +45,10 @@ export async function getMetadataFromAddress(options: GetMetadataOptions) {
     const bytecode = await getBytecode(options.address, options.rpcProvider);
     const { ipfs: metadataIpfsCid } = decodeBytecode(bytecode);
     try {
-      const req = await fetch(
+      const req = await axios(
         `${options.ipfsProvider}/ipfs/${metadataIpfsCid}`
       );
-      contractMetadataJSON = await req.json();
+      contractMetadataJSON = req.data;
     } catch (e) {
       console.log(e);
       return false;

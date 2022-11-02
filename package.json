@@ -44,7 +44,7 @@
     "@blossom-labs/rosette-radspec": "^0.2.1",
     "@ethersproject/abi": "^5.7.0",
     "@marcocastignoli/bytecode-utils": "^1.0.4",
-    "cross-fetch": "^3.1.5",
+    "axios": "^1.1.3",
     "ethereum-provider": "^0.7.7",
     "ethers": "^5.7.2"
   },
