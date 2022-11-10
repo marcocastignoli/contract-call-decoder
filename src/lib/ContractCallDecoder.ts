@@ -1,9 +1,9 @@
 import radspec from '@blossom-labs/rosette-radspec';
-import { Interface } from '@ethersproject/abi';
 import {
   decode as decodeBytecode,
   get as getBytecode,
-} from '@marcocastignoli/bytecode-utils';
+} from '@ethereum-sourcify/bytecode-utils';
+import { Interface } from '@ethersproject/abi';
 import { EthereumProvider } from 'ethereum-provider';
 
 require('isomorphic-fetch');

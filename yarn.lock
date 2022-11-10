@@ -484,6 +484,17 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@ethereum-sourcify/bytecode-utils@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@ethereum-sourcify/bytecode-utils/-/bytecode-utils-1.0.4.tgz#ba437355d0839c309c67974eeb0926ae9cf5d603"
+  integrity sha512-7fDys6pUsn4c2HS67P9K9kl112o1RS316Indx6LBFm5wO86MWcMwVlG3cIOTIq1ZeALGeDJ3UNR7Nyi/7NG8zA==
+  dependencies:
+    "@ethersproject/bytes" "^5.7.0"
+    "@types/node" "^18.11.4"
+    bs58 "^5.0.0"
+    cbor-x "^1.4.1"
+    ethereum-provider "^0.7.7"
+
 "@ethersproject/abi@5.7.0", "@ethersproject/abi@^5.7.0":
   version "5.7.0"
   resolved "https://registry.yarnpkg.com/@ethersproject/abi/-/abi-5.7.0.tgz#b3f3e045bbbeed1af3947335c247ad625a44e449"
@@ -916,17 +927,6 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
-"@marcocastignoli/bytecode-utils@^1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@marcocastignoli/bytecode-utils/-/bytecode-utils-1.0.4.tgz#ea592063f57e97ded40fa5727761454df77d7ec7"
-  integrity sha512-5SkeftVLklKFAEP5Bk5nSux3xvBtMFeBn5lqB+JLv+8ERP/b6rTjgN0u+/Fv/Fqa2g3DoaTFs2norAceeGQXTQ==
-  dependencies:
-    "@ethersproject/bytes" "^5.7.0"
-    "@types/node" "^18.11.4"
-    bs58 "^5.0.0"
-    cbor-x "^1.4.1"
-    ethereum-provider "^0.7.7"
-
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz#7619c2eb21b25483f6d167548b4cfd5a7488c3d5"
@@ -1016,9 +1016,9 @@
   integrity sha512-LhF+9fbIX4iPzhsRLpK5H7iPdvW8L4IwGciXQIOEcuF62+9nw/VQVsOViAOOGxY3OlOKGLFv0sWwJXdwQeTn6A==
 
 "@types/node@^18.11.4":
-  version "18.11.7"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.11.7.tgz#8ccef136f240770c1379d50100796a6952f01f94"
-  integrity sha512-LhFTglglr63mNXUSRYD8A+ZAIu5sFqNJ4Y2fPuY7UlrySJH87rRRlhtVmMHplmfk5WkoJGmDjE9oiTfyX94CpQ==
+  version "18.11.9"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.11.9.tgz#02d013de7058cea16d36168ef2fc653464cfbad4"
+  integrity sha512-CRpX21/kGdzjOpFsZSkcrXMGIBWMGNIHXXBVFSH+ggkftxg+XYP20TESbh+zFvFj3EQOl5byk0HTRn1IL6hbqg==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.1"

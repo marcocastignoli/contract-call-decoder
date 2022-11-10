@@ -42,8 +42,8 @@
   },
   "dependencies": {
     "@blossom-labs/rosette-radspec": "^0.2.1",
+    "@ethereum-sourcify/bytecode-utils": "^1.0.4",
     "@ethersproject/abi": "^5.7.0",
-    "@marcocastignoli/bytecode-utils": "^1.0.4",
     "ethereum-provider": "^0.7.7",
     "ethers": "^5.7.2",
     "isomorphic-fetch": "^3.0.0"
